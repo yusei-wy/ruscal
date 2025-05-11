@@ -13,6 +13,7 @@ fn whitespace(mut input: &str) -> &str {
     input
 }
 
+/// 数値を認識する
 fn number(mut input: &str) -> &str {
     if matches!(
         input.chars().next(),
@@ -28,6 +29,7 @@ fn number(mut input: &str) -> &str {
     input
 }
 
+/// 識別子を認識する
 fn ident(mut input: &str) -> &str {
     if matches!(input.chars().next(), Some(_x @ ('a'..='z' | 'A'..='Z'))) {
         while matches!(
